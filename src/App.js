@@ -5,9 +5,10 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom'
-import { PostsList } from './features/posts/PostsList'
 
 import { Navbar } from './app/Navbar'
+import { AddPostForm } from './features/posts/AddPostForm'
+import { PostsList } from './features/posts/PostsList'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             path="/"
             render={() => (
               <React.Fragment>
+                <AddPostForm />
                 <PostsList />
               </React.Fragment>
             )}
